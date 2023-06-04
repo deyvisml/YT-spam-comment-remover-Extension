@@ -1,0 +1,6 @@
+scikit-learn
+transformers
+sentence-transformers
+google-api-python-client
+emoji
+morepython

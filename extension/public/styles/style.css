@@ -1,0 +1,31 @@
+.blurred-comment-overlay {
+    height: calc(100% + 20px);
+    top: -20px;
+
+    width: 104%;
+    left: -2%;
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+    border-radius: 4px;
+
+    margin-top: calc(-1 * var(--ytd-decorated-comment-background-offset-top, 0px));
+    margin-left: calc(-1 * var(--ytd-decorated-comment-background-offset-left, 0px));
+    padding-top: var(--ytd-decorated-comment-background-offset-top, 0px);
+    padding-left: var(--ytd-decorated-comment-background-offset-left, 0px);
+}
+
+/* Ensure replies button is above blurry overlay */
+ytd-button-renderer#less-replies.ytd-comment-replies-renderer,
+ytd-button-renderer#more-replies.ytd-comment-replies-renderer {
+    z-index: 2;
+}
+
+/* Ensure action menu is above blurry overlay */
+div#action-menu.ytd-comment-renderer {
+    z-index: 3;
+}
+
+ytd-menu-popup-renderer {
+    min-height: 88px;
+}
